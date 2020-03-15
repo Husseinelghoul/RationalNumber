@@ -7,7 +7,7 @@ def computeGCD(x, y):
 class Rational:
     def __init__(self,numerator=0,denomirator=1):
         if denomirator==0:
-            raise ZeroDivisionError("Illegal Argument Exception")
+            raise ZeroDivisionError("IllegalArgumentException")
         factor = computeGCD(numerator,denomirator)
         self.numerator = numerator//factor
         self.denomirator = denomirator//factor
@@ -31,13 +31,17 @@ class Rational:
         #y = inverse other
         y = Rational(other.denomirator,other.numerator)
         return self*y
+    def __eq__(self, other):
+        return (self.numerator == other.numerator and self.denomirator == other.denomirator)
+    def __ne__(self,other):
+        return  not self==other
     
 #Testing
-x = Rational(3,-5)
-y = Rational(3,6)
-print(x)#Should print -3/5
-print(y)#Should print 3/6
-print(x+y)#Should print -1/10
-print(x-y)#Should print -11/10
-print(x*y)#Should print -3/10
-print(x/y)#Should print -6/5
+# x = Rational(3,-5)
+# y = Rational(3,6)
+# print(x)#Should print -3/5
+# print(y)#Should print 3/6
+# print(x+y)#Should print -1/10
+# print(x-y)#Should print -11/10
+# print(x*y)#Should print -3/10
+# print(x/y)#Should print -6/5
