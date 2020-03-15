@@ -54,9 +54,9 @@ class TestRationalBRs(unittest.TestCase):
         with self.assertRaises(ValueError):
             Rational(5, 0)
 
-    # def test_BR2(self):
-    #      x = Rational(5,0)
-    #      self.assertNotEqual(x.denomirator,0,"IllegalArgumentException")
+    def test_BR2(self):
+         x = Rational(2,4)
+         self.assertEqual(x.__str__(), "1/2", "Rational(2, 4) should output 1/2")
 
     def test_BR3(self):
         x = Rational(3,6);
@@ -67,7 +67,6 @@ class TestRationalBRs(unittest.TestCase):
         x = Rational(-3,4)
         y = Rational(3,-4)
         self.assertEqual(x,y,"Error in BR4") 
-        
 
 if __name__ == '__main__':
     unittest.main()

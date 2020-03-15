@@ -1,0 +1,43 @@
+Test1=Checking adding rationals
+Input1=2/5 + 2/5
+ExpectedOutput1=4/5
+
+Test2=Checking subtracting a positive rational
+Input2=4/5 - 3/5
+ExpectedOutput2=1/5
+
+Test3=Checking subtracting a negative rational
+Input3=2/5 - (-2/5)
+ExpectedOutput3=4/5
+
+Test4=Multiplying a positive rational
+Input4=2/5*2/5
+ExpectedOutput4=4/25
+
+Test5=Multiplying a negative rational
+Input5=2/5*(-2/5)
+ExpectedOutput5=-4/25
+
+Test6=Dividing a positive rational
+Input6=2/3 div 5/7
+ExpectedOutput6=14/15
+
+Test7=Dividing a negative rational
+Input7=2/3 div -5/7
+ExpectedOutput7=-14/15
+
+Test8=Zero as denominator 
+Input8=5/0
+ExpectedOutput8=IllegalArgumentError
+
+Test9=Testing print(Rational)
+Input9=Rational(2, 4)
+ExpectedOutput9=console output: "2/4"
+
+Test10=Testing reduction
+Input10=3/6 = 1/2
+ExpectedOutput10=True
+
+Test11=Testing negative sign adjustment
+Input11=-3/4 = 3/-4
+ExpectedOutput11=True
