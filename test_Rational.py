@@ -50,9 +50,9 @@ class TestRationalMethods(unittest.TestCase):
         self.assertEqual(result,Rational(-14,15),"Error in dividing Negative fractions")
 
 class TestRationalBRs(unittest.TestCase):
-    # def test_BR1(self):
-    #      x = Rational(5,0)
-    #      self.assertRaises(ZeroDivisionError,0,"IllegalArgumentException")
+    def test_BR1(self):
+        with self.assertRaises(ValueError):
+            Rational(5, 0)
 
     # def test_BR2(self):
     #      x = Rational(5,0)
@@ -66,7 +66,7 @@ class TestRationalBRs(unittest.TestCase):
     def test_BR4(self):
         x = Rational(-3,4)
         y = Rational(3,-4)
-        self.assertEqual(x,y,"Error in BR4")
+        self.assertEqual(x,y,"Error in BR4") 
         
 
 if __name__ == '__main__':

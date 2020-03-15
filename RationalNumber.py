@@ -9,7 +9,8 @@ class Rational:
             return x 
 
         if denomirator==0:
-            raise ZeroDivisionError("IllegalArgumentException")
+            raise ValueError('Illegal Argument')
+            
         factor = computeGCD(numerator,denomirator)
         self.numerator = numerator//factor
         self.denomirator = denomirator//factor
